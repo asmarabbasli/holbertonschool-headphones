@@ -1,0 +1,29 @@
+.what-we-do {
+  h2 {
+    font-size: 2rem;
+  }
+
+  p {
+    animation: fadeScale 3s ease-in-out infinite;
+  }
+}
+$primary-color: #4CAF50;
+$bounce-duration: 0.6s;
+
+.pentagon {
+  background-color: $primary-color;
+  transition: transform 0.3s ease;
+}
+@mixin bounce {
+  @keyframes bounce {
+    0%   { transform: translateY(0); }
+    30%  { transform: translateY(-15px); }
+    50%  { transform: translateY(0); }
+    70%  { transform: translateY(-7px); }
+    100% { transform: translateY(0); }
+  }
+}
+
+@include bounce;
+@import 'variables';
+@import 'animations';
